@@ -6,5 +6,12 @@
 # Invenio is free software; you can redistribute it and/or modify it
 # under the terms of the MIT License; see LICENSE file for more details.
 
-[pytest]
-addopts = --pep8 --ignore=docs --cov=invenio_db --cov=invenio_db/alembic --cov-report=term-missing
+"""Default configuration for Invenio-DB."""
+
+from os import environ
+
+DB_POOL_CLASS = 'QueuePool'
+"""Database connection pool"""
+
+DB_SQLALCHEMY_POOL_PACKAGE = 'sqlalchemy.pool'
+"""SQLAlchemy pool package"""
